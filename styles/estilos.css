@@ -40,7 +40,7 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    background: brown;
+    background: black;
     height: 70px;
     
     margin: auto;
@@ -93,8 +93,8 @@ body {
 }
 
 section {
-    min-height: 116vh;
-    padding: 5rem 9% 2rem;
+    min-height: 100vh;
+    padding: 10rem 9% 2rem;
 }
 
 .inicio{
@@ -132,7 +132,7 @@ section {
     font-size: 3.2rem;
     font-weight: 700;
     color: transparent;
-    -webkit-text-stroke: 1px var(--main-color);
+    -webkit-text-stroke: 1px var(--second-bg-color-color);
     
 }
 
@@ -292,7 +292,7 @@ section {
     align-items: center;
     flex-direction: column;
     gap: 2rem;
-    background: var(--bg-color);
+    background: var(--third-bg-color-color);
     padding-bottom: 6rem;
     
 }
@@ -331,27 +331,27 @@ span {
 
 .about-img img {
     width: 90%;
-    border-radius: 90%;
+    border-radius: 5%;
     border: .2rem solid var(--main-color);
 }
 
-.about-img .circle-spin {
+.about-img .squar-spin {
     
     position: absolute;
     justify-content: center;
     align-items: center;
     
-    top: -10%;
-    left: 5%;
+    top: 50%;
+    left: 50%;
     
     transform: translate(-50, -50) rotate(0);
-    width: 90%;
-    height: 120%;
-    border-radius: 50%;
-    border-top: .4rem solid #4a4a2d;
-    border-bottom: .4rem solid #4a4a2d;
-    border-left: .4rem solid #7A7B1B;
-    border-right: .4rem solid #7A7B1B;
+    width: 100%;
+    height: 100%;
+    border-radius: 5%;
+    border-top: .2rem solid #4a4a2d;
+    border-bottom: .2rem solid #4a4a2d;
+    border-left: .2rem solid #7A7B1B;
+    border-right: .2rem solid #7A7B1B;
 }
 
 .about .about-content h3{
