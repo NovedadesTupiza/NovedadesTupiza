@@ -363,6 +363,17 @@ span {
     
 }
 
+.about-content img {
+    position: relative;
+    width: 25rem;
+    height: 25rem;
+    border-radius: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+     }
+
+
 .about-content h3 {
     font-size: 2.2rem;
     text-shadow: 1px 1px 1px #a5a97e;
@@ -527,7 +538,7 @@ button {
     text-align: justify;
     
     background: url("/images/fondofinal3.png") no-repeat;
-    background-color: black;
+    background-color: #fff7f1;
     background-size:auto;
     background-position:center;
 }  
@@ -538,7 +549,7 @@ button {
     padding-right:5px;
     padding-left: 22px;
     width: 95%;
-    text-shadow: 1px 1px  black;
+    text-shadow: 0px 0px  black;
 }
 
 .skills .skills-content p {
@@ -565,6 +576,33 @@ button {
     border-radius: 5px;
     
 }
+.otros{
+    text-align: justify;
+    
+    background: url("/images/fondofinal3.png") no-repeat;
+    background-color:black;
+    background-size:auto;
+    background-position:center;
+  }
+
+.otros p {
+    font-size: 1.5rem;
+    padding-top: .3rem;
+    padding-right:5px;
+    padding-left: 22px;
+    width: 95%;
+    text-shadow: 0px 0px  black;
+}
+
+.skills .skills-content p {
+    font-size: 1.5rem;
+    padding-top: .5rem;
+    width: 95%;
+    padding-left: 22px;
+    padding-right: 5px;
+    
+
+
 
 footer{
 border-style: solid;
