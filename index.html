@@ -67,9 +67,9 @@
             <div class="text-animate">
                 <h3>¡La Joya Bella de Bolivia!</h3>
             </div>
-            <p>“Descubre bolsos, ropa de invierno, pijamas y muchos artículos más, diseñadas para tu día a día.
-                <br>Entregas rápida en Tupiza.”
-                <br>Realizamos envíos a nivel nacional</p>
+            <p>“Descubre bolsos, ropa de invierno, pijamas y muchos artículos más, diseñadas para tu día a día.”
+                <br>✔ Entregas rápidas en Tupiza.
+                <br>✔ Realizamos envíos a nivel nacional.</p>
             
         </div>
         
@@ -187,7 +187,7 @@
                         </div>
                    </div>
                     <img class= ""src="" alt="">
-                    <video class= "medio" src="" loop controls></video>
+                    <video class="medio" src="..." loop muted playsinline></video>
                     
 
                     <div class="educacion-content">
@@ -204,8 +204,12 @@
                 <a href="https://wa.me/59178627278?text=Me interesa, mas información, sobre pijama con oso" target="_blank" class="btn">Reservar talla</a>
                 
             </div>
-             <img class= ""src="" alt="">
-                    <video class= "medio" src="/videos/7.1 Vidoso.mp4" loop controls></video>
+                    <img class= ""src="" alt="">
+
+                    <div class="video-container">
+                        <video src="videos/7.1 Vidoso.mp4" autoplay muted loop playsinline></video>
+                    </div>
+                    
                            <hr>
 
                             <h3>PIJAMAS NIÑA TALLA 6 - 7 - 8</h3>
@@ -221,7 +225,10 @@
                 
             </div>
                     <img class= ""src="" alt="">
-                    <video class= "medio" src="/videos/8.videopinguino.mp4" loop controls></video>
+
+                    <div class="video-container">
+                        <video src="videos/8.videopinguino.mp4" autoplay muted loop playsinline></video>
+                    </div>
 
                     <div class="educacion-content">
                         <div class="content">
@@ -246,7 +253,10 @@
                 
             </div>
                     <img class= "centro"src="" alt="">
-                    <video class= "medio" src="" loop controls></video>
+
+                    <div class="video-container">
+                        <video src="..." autoplay muted loop playsinline></video>
+                    </div>
 
                 </div>
             </div>
@@ -271,7 +281,10 @@
                 
             </div>
                     <img class= ""src="" alt="">
-                    <video class= "medio" src="videos/finicial.mp4" loop controls></video>
+
+                    <div class="video-container">
+                        <video src="..." autoplay muted loop playsinline></video>
+                    </div>
 
                     <div class="educacion-content">
                         <div class="content">
@@ -286,8 +299,11 @@
                 
             </div>
                     <img class= ""src="" alt="">
-                    <video class= "medio" src="videos/fjuvenil.mp4" loop controls></video>
-                
+                    
+                    <div class="video-container">
+                        <video src="..." autoplay muted loop playsinline></video>
+                    </div>
+               
 
                     <div class="educacion-content">
                         <div class="content">
@@ -303,10 +319,11 @@
                 
                 </div>
                     <img class= ""src="" alt="">
-                    <video class= "medio" src="videos/fjuvenil.mp4" loop controls></video>
 
-
-
+                    <div class="video-container">
+                        <video src="..." autoplay muted loop playsinline></video>
+                    </div>
+                
                     <div class="educacion-content">
                         <div class="content">
                             <div class=""><i class=""></i></div>
@@ -321,7 +338,10 @@
   
             </div>
                     <img class= ""src="" alt="">
-                    <video class= "medio" src="" loop controls></video>
+
+                    <div class="video-container">
+                        <video src="..." autoplay muted loop playsinline></video>
+                    </div>
 
                     <div class="educacion-content">
                         <div class="content">
@@ -385,21 +405,16 @@
             </div>
         </div>
          <div class="btn-box">
-                <a href="https://wa.me/59178627278?text=Me interesa, mas información sobre Kit de adaptadores" target="_blank" class="btn">"¡Pedir el mío!</a>
+                <a href="https://wa.me/59178627278?text=Me interesa, mas información sobre Kit de adaptadores" target="_blank" class="btn">¡Pedir el mío!</a>
   
             </div>
     </section>
-
-
-
-
 
     <!--Sección Habilidades-->
     <section class="otros" id="otros">
         <h2 class="heading">PRODUCTOS <span>¡EN OFERTA!</span></h2>
         <p> Aprovecha nuestros precios especiales en una selección exclusiva diseñada para tu comodidad y estilo de vida.
-        </p>
-        
+        </p>     
 
         <div class="educacion-row">
             <div class="educacion-column">
@@ -506,4 +521,56 @@
         <h5><span>Dirección: </span> Tupiza, realizamos entregas en la terminal de buses, previa coordinación</h5>
         
     </footer>
-    <audio src="music/Kjarkas - Tupiza (tonada) (letra).mp3" autoplay controls></audio>
+
+    <audio id="miAudio" controls>
+  <source src="music/Kjarkas - Tupiza (tonada) (letra).mp3" type="audio/mpeg">
+</audio>
+
+<script>
+const audio = document.getElementById("miAudio");
+
+audio.addEventListener("play", () => {
+    audio.currentTime = 2; // empieza en segundo 2
+});
+
+audio.addEventListener("timeupdate", () => {
+    if (audio.currentTime >= 10) {
+        audio.pause(); // se detiene en segundo 10
+    }
+});
+</script>
+
+<script>
+const links = document.querySelectorAll('.navbar a');
+const toggle = document.getElementById('menu-toggle');
+
+links.forEach(link => {
+    link.addEventListener('click', () => {
+        toggle.checked = false;
+    });
+});
+</script>
+
+<script>
+const videos = document.querySelectorAll("video");
+
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.play();
+        } else {
+            entry.target.pause();
+        }
+    });
+}, {
+    threshold: 0.6
+});
+
+videos.forEach(video => {
+    video.muted = true; // necesario para autoplay
+    observer.observe(video);
+});
+</script>
+
+</body>
+</html>
